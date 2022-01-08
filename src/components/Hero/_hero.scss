@@ -1,0 +1,91 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  @include flex-center;
+  background-color: black;
+  .back-right {
+    width: 70%;
+    height: 100vh;
+    position: absolute;
+    background-color: $grey-back;
+    right: 0;
+  }
+  .container-text {
+    width: 50vw;
+    z-index: 1;
+    margin-left: 35vw;
+    margin-top: 18vh;
+    h1 {
+      color: white;
+      font-size: 4.5rem;
+      font-weight: 600;
+      overflow-y: hidden;
+    }
+    h2 {
+      color: $grey;
+      font-size: 3.5rem;
+      font-weight: 600;
+    }
+    p {
+      margin-top: 5vh;
+      color: white;
+      font-weight: 500;
+    }
+  }
+
+  img {
+    width: 45vw;
+    height: 80vh;
+    bottom: 5%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .hero {
+    img {
+      height: 60vh;
+      width: 50vw;
+      bottom: 20%;
+    }
+    .container-text {
+      margin-left: 40vw;
+      margin-top: 13vh;
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .hero {
+    @include flex-center($align: flex-end, $justify: flex-start);
+
+    img {
+      top: 10vh;
+      width: 100%;
+      height: 50vh;
+    }
+    .back-right {
+      top: 10vh;
+      height: 90vh;
+      width: 100% !important;
+    }
+
+    .container-text {
+      width: 90vw;
+      margin-left: 5vw;
+      margin-bottom: 5vh;
+      h1 {
+        font-size: 7vw;
+      }
+      h2 {
+        font-size: 6vw;
+      }
+      p {
+        font-size: 4vw;
+      }
+    }
+  }
+}

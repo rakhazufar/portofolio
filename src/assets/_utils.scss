@@ -1,0 +1,18 @@
+$menus: #babab4;
+$blue: #5221e6;
+$grey: #8c8c91;
+$contact-hover: #2f1283;
+$grey-back: #181823;
+$menu-hover: #00fff8;
+$color: #fff3e4;
+$button-link: #5221e6;
+
+@mixin flex-center($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin transition-text($time: 0.2s) {
+  transition: all $time;
+}

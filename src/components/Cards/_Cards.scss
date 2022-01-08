@@ -1,0 +1,72 @@
+.card {
+  @include flex-center;
+  width: 99.5%;
+  @include transition-text;
+  background-color: black !important;
+  margin: 2vh 0;
+  cursor: pointer;
+
+  img {
+    width: inherit;
+  }
+  &:hover {
+    width: 100%;
+    @include transition-text;
+    .caption-card {
+      padding: 5.5vh 2.5vw 7.5vh 2.5vw;
+      h2 {
+        color: $menu-hover;
+        padding-left: 0.5vw;
+        @include transition-text;
+      }
+      .link {
+        bottom: 0%;
+        right: 0%;
+        @include transition-text($time: 0.5s);
+      }
+    }
+  }
+  .caption-card {
+    position: relative;
+    width: inherit;
+    padding: 5vh 2vw 7vh 2vw;
+    background-color: $grey-back;
+    overflow-y: hidden;
+    h2 {
+      font-size: 2.2vw;
+      @include transition-text;
+      color: white;
+    }
+    p {
+      font-size: 1.3vw;
+      color: $menus;
+    }
+    .link {
+      width: fit-content;
+      padding: 15px 20px;
+      background-color: $button-link;
+      position: absolute;
+      color: white;
+      right: -10%;
+      bottom: -20%;
+      @include transition-text($time: 0.5s);
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .card {
+    .caption-card {
+      padding: 2vh 2vw 2vh 2vw;
+      h2 {
+        font-size: 5vw;
+      }
+      p {
+        font-size: 3vw;
+      }
+      .link {
+        display: none;
+      }
+    }
+  }
+}

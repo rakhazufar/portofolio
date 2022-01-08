@@ -1,0 +1,139 @@
+.container {
+  padding: 0 !important;
+}
+
+.activeNavbar {
+  background-color: black;
+  @include transition-text($time: 0.5s);
+  .link {
+    color: white !important;
+  }
+}
+
+.home {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1.7rem !important;
+  color: white !important;
+}
+
+.nav {
+  align-items: center;
+  padding: 0 !important;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.navbar-nav {
+  align-items: center;
+  .link {
+    font-size: 1rem !important;
+    font-weight: 500;
+    color: $menus;
+    height: fit-content;
+    margin: 0 0.8vw;
+  }
+
+  .link:hover {
+    color: $menu-hover !important;
+  }
+}
+.contact {
+  margin: 0 2vw;
+  background-color: $blue;
+  height: 10vh !important;
+  &:hover {
+    background-color: $contact-hover;
+  }
+  .link {
+    color: rgb(224, 224, 224) !important;
+  }
+  .contact-link:hover {
+    color: white !important;
+  }
+}
+
+.icon-toggler {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.icon-bar {
+  height: 3px;
+  margin: 3px 0;
+  background-color: white;
+}
+
+.top-bar,
+.middle-bar,
+.bottom-bar {
+  transition: all 0.2s;
+}
+
+.top-bar {
+  width: 15px;
+}
+.middle-bar {
+  width: 20px;
+}
+
+.bottom-bar {
+  width: 25px;
+}
+
+.navbar-toggler {
+  outline: none !important;
+  border: hidden !important;
+  height: 10vh;
+  margin-right: 5vw;
+  &:focus {
+    box-shadow: none !important;
+  }
+
+  .top-bar {
+    transform: translateY(9px);
+  }
+  .bottom-bar {
+    transform: translateY(-9px);
+  }
+}
+
+.navbar-toggler.collapsed {
+  .top-bar {
+    transform: translateY(0px);
+  }
+  .bottom-bar {
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    max-width: 100% !important;
+  }
+  .navbar-nav {
+    align-items: center;
+  }
+  .link {
+    padding: 3vh 0 !important;
+  }
+  .contact {
+    height: fit-content !important;
+  }
+
+  .logo {
+    margin-left: 5vw;
+  }
+  .navbar-collapse {
+    background-color: $grey-back;
+    margin-top: -0.2vh;
+  }
+  .contact {
+    margin: 0;
+    background-color: $blue;
+  }
+}

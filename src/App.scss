@@ -1,0 +1,19 @@
+@import "./assets/utils";
+@import "./components/header/Header";
+@import "./components/Hero/hero";
+@import "./components/about/about";
+@import "./components/subskills/subskills";
+@import "./components/projects/projects";
+@import "./components/Cards/Cards";
+@import "./components/Button/button";
+@import "./components/Contact/Contact";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&family=Oswald:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}

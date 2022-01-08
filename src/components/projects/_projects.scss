@@ -1,0 +1,47 @@
+.projects {
+  @include flex-center($align: flex-start);
+  background-color: black;
+  color: white;
+  padding: 10vh 5vw 20vh 5vw;
+  .project-left,
+  .project-right {
+    flex: 1;
+    h1 {
+      font-size: 1.5vw;
+      font-weight: 600;
+      color: $grey;
+    }
+    h2 {
+      font-size: 4vw;
+      font-weight: 600;
+      overflow-y: hidden;
+    }
+  }
+  .project-left {
+    padding-right: 1vw;
+  }
+  .padding-right {
+    padding-left: 1vw;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .projects {
+    flex-direction: column;
+    .project-left {
+      h1 {
+        font-size: 4vw;
+      }
+      h2 {
+        font-size: 10vw;
+      }
+    }
+    .project-right {
+    }
+  }
+}
+.buttonShowMore {
+  width: 100%;
+  @include flex-center;
+  padding: 7vh 0;
+}

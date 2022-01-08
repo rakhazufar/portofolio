@@ -1,0 +1,12 @@
+button {
+  padding: 2vh 5vw;
+  border: $button-link solid 2px;
+  background-color: transparent;
+  color: white;
+  font-weight: 500;
+  &:hover {
+    background-color: $button-link;
+    box-shadow: 0px 0px 30px $button-link;
+    transition: all 0.3s;
+  }
+}

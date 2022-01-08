@@ -1,0 +1,80 @@
+.contactSection {
+  @include flex-center($align: flex-start);
+  background-color: black;
+  overflow-y: hidden;
+  .contactText {
+    flex: 0.8;
+    @include flex-center($justify: flex-start, $align: flex-start);
+    flex-direction: column;
+    height: 100%;
+    padding: 0 0 0 5vw;
+    h2 {
+      font-size: 7vh;
+      color: white;
+      font-weight: 600;
+    }
+    p {
+      color: $grey;
+      font-size: 4vh;
+    }
+    // img {
+    //   height: 100vh;
+    //   object-fit: cover;
+    //   position: absolute;
+    //   top: 7vh;
+    // }
+  }
+  .contactForm {
+    flex: 1;
+    color: white;
+    height: 100%;
+    form {
+      @include flex-center($align: flex-start);
+      flex-direction: column;
+      padding: 0 0 3vh 5vw;
+      h2 {
+        display: none;
+      }
+      input,
+      textarea {
+        width: 70%;
+        margin-bottom: 3vh;
+        border: none;
+        outline: none;
+        background-color: $grey-back;
+        color: white;
+        padding: 2px 2px;
+      }
+      label {
+        font-size: 3vh;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .contactSection {
+    height: fit-content;
+    width: 100%;
+    padding-top: 10vh;
+    .contactText {
+      display: none;
+    }
+    .contactForm {
+      @include flex-center;
+      form {
+        width: fit-content;
+        padding-left: 0 !important;
+        h2 {
+          font-size: 5vh;
+          display: inline;
+        }
+      }
+      input,
+      textarea {
+        width: 95% !important;
+      }
+    }
+  }
+}
