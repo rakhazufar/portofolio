@@ -3,6 +3,7 @@ import Card from "../Cards/Cards";
 import Display from "../../assets/images/cookholic.png";
 import Parallax from "../../assets/images/parallax.png";
 import Slicing from "../../assets/images/slicing.png";
+import Moovie from "../../assets/images/moovie.png";
 import ButtonProject from "../Button/Button";
 
 export default function Projects() {
@@ -30,11 +31,10 @@ export default function Projects() {
       link: "slicingproject.netlify.app",
     },
     {
-      image: Parallax,
-      title: "Travel.co (Parallax)",
-      caption:
-        "This is my first website that implement parallax, i used HTML, CSS, and JS",
-      link: "https://parallax-rakha.netlify.app/#",
+      image: Moovie,
+      title: "Moovie",
+      caption: "I still working on this one",
+      link: "#",
     },
   ]);
 
