@@ -45,13 +45,13 @@ export default function Projects() {
         <h2>Work that I have done in past</h2>
         <div className="Cards-container">
           {cardsLeft.map((card) => (
-            <Card {...card} />
+            <Card {...card} key={card.title} />
           ))}
         </div>
       </div>
       <div className="project-right">
         {cardsRight.map((card) => (
-          <Card {...card} />
+          <Card {...card} key={card.title} />
         ))}
         <div className="buttonShowMore">
           <ButtonProject text="VIEW ALL PROJECT" />
