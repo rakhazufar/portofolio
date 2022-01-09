@@ -17,12 +17,24 @@
       color: $grey;
       font-size: 4vh;
     }
-    // img {
-    //   height: 100vh;
-    //   object-fit: cover;
-    //   position: absolute;
-    //   top: 7vh;
-    // }
+    .sosial-media {
+      @include flex-center;
+      .whatsapp,
+      .instagram,
+      .github {
+        * {
+          text-decoration: none;
+          width: 40px;
+          height: 40px;
+        }
+        margin: 0 1vw;
+        color: $menus;
+        cursor: pointer;
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
   }
   .contactForm {
     flex: 1;
@@ -58,18 +70,32 @@
     height: fit-content;
     width: 100%;
     padding-top: 10vh;
+    flex-direction: column;
+    align-items: center;
     .contactText {
-      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 2vh 0 !important;
+      .whatsapp,
+      .instagram,
+      .github {
+        * {
+          width: 60px !important;
+          height: 60px !important;
+        }
+      }
+      h2 {
+        font-size: 6vh !important;
+      }
+      p {
+        display: none;
+      }
     }
     .contactForm {
       @include flex-center;
       form {
-        width: fit-content;
+        width: 80vw;
         padding-left: 0 !important;
-        h2 {
-          font-size: 5vh;
-          display: inline;
-        }
       }
       input,
       textarea {
